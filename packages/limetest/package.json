@@ -35,5 +35,8 @@
   "homepage": "https://limetest.com",
   "author": {
     "name": "limetest"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
