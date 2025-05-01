@@ -102,6 +102,7 @@ class Workspace {
 
       // 2. Make sure package's package.jsons are consistent
       if (!pkg.isPrivate) {
+        pkg.packageJSON.version = version;
         pkg.packageJSON.repository = workspacePackageJSON.repository;
         pkg.packageJSON.engines = workspacePackageJSON.engines;
         pkg.packageJSON.homepage = workspacePackageJSON.homepage;
