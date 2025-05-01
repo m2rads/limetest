@@ -21,7 +21,7 @@ jobs:
       - run: npx playwright install --with-deps
       - run: pnpm run build
       - run: pnpm run lint
-      - run: pnpm run ctest
+      - run: pnpm run test
       - run: npx tsx utils/workspace.ts --ensure-consistent
       - run: pnpm --filter="@limetest/core" --filter="@limetest/limetest" --filter="@limetest/mcp" publish --provenance
         env:
