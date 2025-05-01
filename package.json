@@ -1,17 +1,17 @@
 {
   "name": "limtest-monorepo",
   "version": "0.0.1",
-  "description": "Litest Testing Framework Monorepo",
+  "description": "Limetest Testing Framework Monorepo",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m2rads/litest"
+    "url": "git+https://github.com/m2rads/limetest"
   },
-  "homepage": "https://litest.com",
+  "homepage": "https://limetest.com",
   "engines": {
     "node": ">=18"
   },
   "author": {
-    "name": "litest"
+    "name": "limetest"
   },
   "license": "Apache-2.0",
   "scripts": {
@@ -21,18 +21,11 @@
     "watch": "tsc --watch",
     "test": "playwright test",
     "clean": "pnpm --filter=\"./packages/*\" exec rm -rf lib tsconfig.tsbuildinfo",
-    "npm-publish": "pnpm run clean && pnpm run build && pnpm run test && pnpm --filter=\"limetest\" --filter=\"@limetest/mcp\" publish"
-  },
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "types": "./index.d.ts",
-      "default": "./index.js"
-    }
+    "npm-publish": "pnpm run clean && pnpm run build && pnpm run test && pnpm --filter=\"@limetest/core\" --filter=\"@limetest/limetest\" --filter=\"@limetest/mcp\" publish"
   },
   "devDependencies": {
     "@limetest/core": "workspace:*",
-    "limetest": "workspace:*",
+    "@limetest/limetest": "workspace:*",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.19.0",
     "@playwright/test": "1.52.0-alpha-1743011787000",
@@ -48,5 +41,5 @@
     "@modelcontextprotocol/sdk": "^1.6.1",
     "playwright": "1.52.0-alpha-1743011787000"
   },
-  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39"
+  "packageManager": "pnpm@10.10.0"
 }

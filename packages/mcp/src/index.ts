@@ -1,5 +1,6 @@
 /**
  * Copyright (c) Microsoft Corporation.
+ * Modified by Limetest.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +20,7 @@
 // import * as screenshot from '@best/core';
 
 import { createServerWithTools } from './server';
-import * as limetest from 'limetest';
+import * as limetest from '@limetest/limetest';
 import { console } from '@limetest/core';
 
 import type { Tool } from '@limetest/core';
