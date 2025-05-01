@@ -23,6 +23,6 @@ jobs:
       - run: pnpm run lint
       - run: pnpm run test
       - run: npx tsx utils/workspace.ts --ensure-consistent
-      - run: pnpm --filter="@limetest/core" --filter="@limetest/limetest" --filter="@limetest/mcp" publish --provenance
+      - run: pnpm --filter="@limetest/core" --filter="@limetest/limetest" --filter="@limetest/mcp" publish --provenance --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
